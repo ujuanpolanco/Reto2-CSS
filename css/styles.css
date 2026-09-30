@@ -1,0 +1,13 @@
+/* Valores de la Guía de Estilos (Anexo 2) */
+:root {
+    --tarjeta-borde: 1px solid #dee2e6;
+    --tarjeta-relleno: 20px;
+    --tarjeta-espacio: 20px;
+}
+
+/* Contenedor flexible: define el área de la tarjeta con borde y relleno */
+.product-card {
+    display: flex;
+    border: var(--tarjeta-borde);
+    padding: var(--tarjeta-relleno);
+}
