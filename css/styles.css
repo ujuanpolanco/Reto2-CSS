@@ -5,9 +5,17 @@
     --tarjeta-espacio: 20px;
 }
 
-/* Contenedor flexible: define el área de la tarjeta con borde y relleno */
+/* Estilo base (móvil): tarjeta vertical, imagen arriba y texto debajo */
 .product-card {
     display: flex;
+    flex-direction: column;
+    gap: var(--tarjeta-espacio);
     border: var(--tarjeta-borde);
     padding: var(--tarjeta-relleno);
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
