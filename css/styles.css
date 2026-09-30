@@ -1,0 +1,37 @@
+:root {
+    /* Valores de la Guía de Estilos (Anexo 2) */
+    --tarjeta-borde: 1px solid #dee2e6;
+    --tarjeta-relleno: 20px;
+    --tarjeta-espacio: 20px;
+}
+
+/* Estilo base (móvil): tarjeta vertical, imagen arriba y texto debajo */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tarjeta-espacio);
+    border: var(--tarjeta-borde);
+    padding: var(--tarjeta-relleno);
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Escritorio (punto de quiebre en 768px): tarjeta horizontal, imagen a la izquierda y texto a la derecha */
+@media (min-width: 768px) {
+    .product-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .product-image {
+        flex: 0 0 40%;
+    }
+
+    .product-info {
+        flex: 1;
+    }
+}
